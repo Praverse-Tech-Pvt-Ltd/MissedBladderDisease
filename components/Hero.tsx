@@ -23,7 +23,7 @@ export function Hero() {
             variants={fadeUp}
             className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4"
           >
-            Physician Education · Physician Education Initiative
+            Physician Education Initiative
           </motion.span>
 
           <motion.h1
@@ -50,10 +50,10 @@ export function Hero() {
               Explore the Science
             </Link>
             <Link
-              href="/round-table"
+              href="#about-icbps"
               className="font-body text-sm px-6 py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors tracking-wide"
             >
-              Join the Round Table
+              Understand IC/BPS
             </Link>
           </motion.div>
 

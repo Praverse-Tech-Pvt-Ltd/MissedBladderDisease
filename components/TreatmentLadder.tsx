@@ -1,7 +1,6 @@
 ﻿'use client'
 
 import { useState } from 'react'
-import Link from 'next/link'
 
 const lines = [
   {
@@ -21,7 +20,7 @@ const lines = [
     id: 'second',
     label: '2nd Line',
     title: 'Oral Pharmacotherapy',
-    body: 'Pentosan polysulfate sodium (Elmiron®) is the only FDA-approved oral drug specifically for IC/BPS. Tricyclics (amitriptyline) and hydroxyzine may adjunct for pain and mast cell modulation.',
+    body: 'Pentosan polysulfate sodium (Elmiron®) is the only FDA-approved oral drug specifically for IC/BPS. Tricyclics and antihistamines may be used as adjuncts for pain and mast cell modulation.',
     treatments: [
       'Pentosan Polysulfate Sodium (Elmiron® 100mg TDS)',
       'Amitriptyline 10–75 mg/night',
@@ -34,7 +33,7 @@ const lines = [
     id: 'third',
     label: '3rd Line',
     title: 'Intravesical Instillations',
-    body: 'Direct bladder instillations bypass oral absorption limitations. DMSO cocktails (DMSO + heparin + lignocaine + triamcinolone) or PPS intravesical solution provide targeted relief.',
+    body: 'Direct bladder instillations bypass oral absorption limitations. DMSO cocktails, heparin-lignocaine combinations, hyaluronic acid, chondroitin sulphate, or PPS-based protocols may provide targeted relief.',
     treatments: [
       'PPS Intravesical (Elmiron® 50mg/mL)',
       'DMSO + Heparin + Lignocaine cocktail',
@@ -128,9 +127,9 @@ export function TreatmentLadder() {
             {current.product && (
               <div className="border border-sage/30 p-6 bg-sage-pale/50">
                 <span className="font-body text-[0.65rem] tracking-[0.15em] uppercase text-sage-deep block mb-2">
-                  Featured Product
+                  Product Information
                 </span>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between gap-4">
                   <span className="font-display text-xl font-light text-charcoal">
                     {current.product.name}
                   </span>
@@ -140,7 +139,7 @@ export function TreatmentLadder() {
                     rel="noopener noreferrer"
                     className="font-body text-sm px-5 py-2.5 bg-sage text-white hover:bg-sage-deep transition-colors tracking-wide"
                   >
-                    View Product ↗
+                    Visit Product Site ↗
                   </a>
                 </div>
               </div>

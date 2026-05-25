@@ -4,11 +4,12 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 const navLinks = [
+  { label: 'About IC/BPS', href: '/#about-icbps' },
   { label: 'Pathophysiology', href: '/pathophysiology' },
   { label: 'Symptoms', href: '/symptoms' },
   { label: 'Diagnosis', href: '/diagnosis' },
   { label: 'Treatment', href: '/treatment' },
-  { label: 'Round Table', href: '/round-table' },
+  { label: 'Products', href: '/products' },
 ]
 
 export function Nav() {

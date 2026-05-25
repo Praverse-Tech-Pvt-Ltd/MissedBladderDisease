@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     template: "%s | Missed Bladder Disease",
   },
   description:
-    "Understanding IC/BPS and overlooked bladder conditions in women. Led by Dr. Sanjay Pandey in collaboration with .",
+    "Understanding IC/BPS and overlooked bladder conditions in women. Led by Dr. Sanjay Pandey.",
   keywords: [
     'missed bladder disease',
     'interstitial cystitis women',

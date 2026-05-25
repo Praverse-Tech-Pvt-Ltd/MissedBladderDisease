@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
-import { ProductCTA } from '@/components/ProductCTA'
 
 export async function generateStaticParams() {
   return [
@@ -118,7 +117,6 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
           </section>
         )}
 
-        <ProductCTA />
       </main>
       <Footer />
     </>

@@ -2,8 +2,8 @@
 import { Hero } from '@/components/Hero'
 import { MistAcronym } from '@/components/MistAcronym'
 import { SymptomsGrid } from '@/components/SymptomsGrid'
-import { ProductCTA } from '@/components/ProductCTA'
-import { RoundTableEvent } from '@/components/RoundTableEvent'
+import { AboutICBPS } from '@/components/AboutICBPS'
+import { ProductSection } from '@/components/ProductSection'
 import { Footer } from '@/components/Footer'
 
 export default function HomePage() {
@@ -14,8 +14,8 @@ export default function HomePage() {
         <Hero />
         <MistAcronym />
         <SymptomsGrid />
-        <ProductCTA />
-        <RoundTableEvent />
+        <AboutICBPS />
+        <ProductSection />
       </main>
       <Footer />
     </>
