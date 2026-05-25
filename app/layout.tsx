@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Missed Bladder Disease | Women's Bladder Health",
+    default: "Missed Bladder Disease",
     template: "%s | Missed Bladder Disease",
   },
   description:
