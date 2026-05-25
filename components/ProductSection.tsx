@@ -34,7 +34,7 @@ export function ProductSection() {
               {[
                 { label: 'Generic Name', value: 'Pentosan Polysulfate Sodium' },
                 { label: 'Therapy Area', value: 'Interstitial Cystitis / Bladder Pain Syndrome' },
-                { label: 'Product Site', value: 'elmiron.com' },
+                { label: 'Product Site', value: 'elmiron.in' },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between gap-6 border-b border-sage/15 pb-3">
                   <dt className="font-body text-[0.7rem] text-muted uppercase tracking-wide">
@@ -48,12 +48,12 @@ export function ProductSection() {
             </dl>
 
             <a
-              href="https://elmiron.com"
+              href="https://elmiron.in"
               target="_blank"
               rel="noopener noreferrer"
               className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide inline-block"
             >
-              Visit Elmiron.com ↗
+              Visit Elmiron.in ↗
             </a>
           </div>
         </motion.div>

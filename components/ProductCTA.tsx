@@ -30,7 +30,7 @@ export function ProductCTA() {
             </p>
             <div className="flex flex-wrap gap-3">
               <a
-                href="https://elmiron.com"
+                href="https://elmiron.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide inline-block"
@@ -38,7 +38,7 @@ export function ProductCTA() {
                 Visit Elmiron® Product Site ↗
               </a>
               <a
-                href="https://elmiron.com/formulations"
+                href="https://elmiron.in/formulations"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-body text-sm px-6 py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors tracking-wide inline-block"

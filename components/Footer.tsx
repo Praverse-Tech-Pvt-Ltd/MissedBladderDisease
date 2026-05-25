@@ -46,7 +46,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="https://elmiron.com"
+                  href="https://elmiron.in"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-body text-sm text-white/60 hover:text-white transition-colors"

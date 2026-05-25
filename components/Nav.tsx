@@ -51,7 +51,7 @@ export function Nav() {
             </Link>
           ))}
           <a
-            href="https://elmiron.com"
+            href="https://elmiron.in"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-sm text-sage-deep hover:text-sage border-b border-sage/40 hover:border-sage pb-0.5 transition-colors tracking-wide"
@@ -85,7 +85,7 @@ export function Nav() {
             </Link>
           ))}
           <a
-            href="https://elmiron.com"
+            href="https://elmiron.in"
             target="_blank"
             rel="noopener noreferrer"
             className="font-body text-sm text-sage-deep tracking-wide"

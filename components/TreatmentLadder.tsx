@@ -27,7 +27,7 @@ const lines = [
       'Hydroxyzine 25–50 mg/night',
       'Quercetin / GAG supplements',
     ],
-    product: { name: 'Elmiron®', href: 'https://elmiron.com' },
+    product: { name: 'Elmiron®', href: 'https://elmiron.in' },
   },
   {
     id: 'third',
@@ -40,7 +40,7 @@ const lines = [
       'Hyaluronic acid (Cystistat®)',
       'Chondroitin sulphate (Uracyst®)',
     ],
-    product: { name: 'Elmiron® Intravesical', href: 'https://elmiron.com/formulations' },
+    product: { name: 'Elmiron® Intravesical', href: 'https://elmiron.in/formulations' },
   },
   {
     id: 'fourth',
