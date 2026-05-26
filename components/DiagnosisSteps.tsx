@@ -37,8 +37,8 @@ const steps = [
   {
     n: '06',
     title: 'Diagnosis & Classification',
-    body: 'Apply ESSIC or AUA IC/BPS diagnostic criteria. Classify as Hunner-type vs. non-Hunner-type. Begin treatment ladder accordingly.',
-    tools: ['ESSIC Criteria', 'AUA Guidelines', 'MISSED Framework'],
+    body: 'Apply GIBBS guideline criteria for IC/BPS diagnosis. Classify as Hunner-type vs. non-Hunner-type. Begin treatment ladder with PPS therapy accordingly.',
+    tools: ['GIBBS Guideline', 'Hunner Classification', 'MISSED Framework'],
   },
 ]
 
