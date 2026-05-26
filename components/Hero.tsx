@@ -2,6 +2,10 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import GradientText from '@/components/ui/GradientText'
+
+const Threads = dynamic(() => import('@/components/ui/Threads'), { ssr: false })
 
 const stagger = {
   hidden: {},
@@ -15,8 +19,13 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section className="min-h-screen bg-charcoal flex items-center pt-16">
-      <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="min-h-screen bg-charcoal flex items-center pt-16 relative overflow-hidden">
+      {/* Threads background */}
+      <div className="absolute inset-0 opacity-30 pointer-events-none">
+        <Threads color={[0.54, 0.67, 0.54]} amplitude={1.2} distance={0.3} />
+      </div>
+
+      <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center relative z-10">
         {/* Left */}
         <motion.div variants={stagger} initial="hidden" animate="visible">
           <motion.span
@@ -31,7 +40,13 @@ export function Hero() {
             className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-4"
           >
             The bladder conditions{' '}
-            <em className="italic text-sage-light">we keep missing</em>
+            <GradientText
+              colors={['#b8cdb8', '#ffffff', '#8aab8a', '#b8cdb8']}
+              animationSpeed={5}
+              className="italic"
+            >
+              we keep missing
+            </GradientText>
           </motion.h1>
 
           <motion.p
@@ -58,10 +73,7 @@ export function Hero() {
           </motion.div>
 
           {/* Stats */}
-          <motion.div
-            variants={fadeUp}
-            className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
-          >
+          <motion.div variants={fadeUp} className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
             {[
               { num: '5–7', label: 'Avg. years to diagnosis' },
               { num: '90%', label: 'Cases in women' },
@@ -69,9 +81,7 @@ export function Hero() {
             ].map((s) => (
               <div key={s.num}>
                 <div className="font-display text-2xl font-light text-sage-light">{s.num}</div>
-                <div className="font-body text-[0.7rem] text-white/40 uppercase tracking-wide mt-0.5">
-                  {s.label}
-                </div>
+                <div className="font-body text-[0.7rem] text-white/40 uppercase tracking-wide mt-0.5">{s.label}</div>
               </div>
             ))}
           </motion.div>
@@ -97,9 +107,7 @@ export function Hero() {
               { letter: 'D', label: 'Dysbiosis / Deficiency' },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-5 border-b border-white/10 pb-4 last:border-0">
-                <span className="font-display text-4xl font-light text-sage w-10 flex-none">
-                  {item.letter}
-                </span>
+                <span className="font-display text-4xl font-light text-sage w-10 flex-none">{item.letter}</span>
                 <span className="font-body text-sm text-white/70 font-light">{item.label}</span>
               </div>
             ))}

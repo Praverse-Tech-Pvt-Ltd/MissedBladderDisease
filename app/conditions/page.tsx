@@ -9,6 +9,14 @@ export const metadata: Metadata = {
   description: 'Bladder conditions within the MISSED framework — from IC/BPS to neurogenic bladder and beyond.',
 }
 
+const categoryColor: Record<string, string> = {
+  I: 'bg-sage-deep',
+  M: 'bg-sage',
+  S: 'bg-muted',
+  E: 'bg-sage-light',
+  D: 'bg-charcoal',
+}
+
 export default function ConditionsPage() {
   return (
     <>
@@ -34,35 +42,46 @@ export default function ConditionsPage() {
         {/* Conditions grid */}
         <section className="bg-cream py-20 section-divider">
           <div className="max-w-6xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-sage/15">
               {CONDITIONS.map((condition) => {
                 const letter = condition.category.charAt(0)
+                const accent = categoryColor[letter] ?? 'bg-sage'
                 return (
                   <Link
                     key={condition.slug}
                     href={`/conditions/${condition.slug}`}
-                    className="group bg-white border border-sage/20 hover:border-sage/50 p-8 transition-colors block relative overflow-hidden"
+                    className="group bg-cream hover:bg-charcoal p-8 transition-all duration-300 flex flex-col relative"
                   >
-                    {/* Faded background letter */}
+                    {/* Top accent line */}
+                    <span className={`absolute top-0 left-0 right-0 h-[2px] ${accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+
+                    {/* Large background letter */}
                     <span
                       aria-hidden="true"
-                      className="absolute -bottom-4 -right-2 font-display text-[8rem] font-light text-sage/8 group-hover:text-sage/12 transition-colors select-none leading-none"
+                      className="absolute -bottom-3 -right-1 font-display text-[7rem] font-light leading-none select-none text-sage/[0.07] group-hover:text-white/[0.04] transition-colors duration-300"
                     >
                       {letter}
                     </span>
 
-                    <span className="inline-block text-[0.62rem] font-body tracking-[0.1em] uppercase text-sage-deep bg-sage-pale px-2.5 py-1 border border-sage/25 mb-4 relative">
+                    {/* Badge */}
+                    <span className="inline-block text-[0.58rem] font-body tracking-[0.12em] uppercase text-sage-deep group-hover:text-white/50 bg-sage-pale group-hover:bg-white/5 px-2.5 py-1 border border-sage/25 group-hover:border-white/10 mb-5 relative self-start transition-all duration-300">
                       {condition.category}
                     </span>
-                    <h2 className="font-display text-xl font-light text-charcoal leading-snug mb-3 group-hover:text-sage-deep transition-colors relative">
+
+                    {/* Title */}
+                    <h2 className="font-display text-xl font-light text-charcoal group-hover:text-white leading-snug mb-3 relative transition-colors duration-300">
                       {condition.name}
                     </h2>
-                    <p className="font-body text-sm text-muted leading-relaxed font-light mb-6 relative">
+
+                    {/* Description */}
+                    <p className="font-body text-sm text-muted group-hover:text-white/60 leading-relaxed font-light mb-8 relative flex-1 transition-colors duration-300">
                       {condition.description}
                     </p>
-                    <span className="font-body text-xs text-sage-deep tracking-wide flex items-center gap-1.5 group-hover:gap-3 transition-all relative">
+
+                    {/* CTA */}
+                    <span className="font-body text-xs text-sage-deep group-hover:text-white/70 tracking-wide flex items-center gap-1.5 group-hover:gap-3 transition-all duration-300 relative">
                       Read clinical overview
-                      <span className="text-sage">→</span>
+                      <span className="text-sage group-hover:text-white/50 transition-colors duration-300">→</span>
                     </span>
                   </Link>
                 )

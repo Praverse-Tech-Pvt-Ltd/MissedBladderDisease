@@ -37,7 +37,7 @@ export function Nav() {
     <>
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled ? 'bg-cream/95 backdrop-blur-sm border-b border-sage/20' : 'bg-cream/80 backdrop-blur-sm'
+          scrolled ? 'bg-cream/95 backdrop-blur-sm' : 'bg-cream/80 backdrop-blur-sm'
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">

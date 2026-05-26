@@ -48,9 +48,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
       <body>
-        <div className="disclaimer-bar">
-          For healthcare professionals only. Educational resource. Not a substitute for clinical judgment.
-        </div>
         {children}
       </body>
     </html>
