@@ -1,14 +1,12 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
+import { notFound } from 'next/navigation'
 import { Nav } from '@/components/Nav'
 import { Footer } from '@/components/Footer'
+import { CONDITIONS } from '@/lib/data'
 
-export async function generateStaticParams() {
-  return [
-    { slug: 'interstitial-cystitis' },
-    { slug: 'bladder-pain-syndrome' },
-    { slug: 'mast-cell-cystitis' },
-    { slug: 'radiation-cystitis' },
-  ]
+export function generateStaticParams() {
+  return CONDITIONS.map((c) => ({ slug: c.slug }))
 }
 
 export async function generateMetadata({
@@ -16,48 +14,17 @@ export async function generateMetadata({
 }: {
   params: { slug: string }
 }): Promise<Metadata> {
-  const name = params.slug.replace(/-/g, ' ')
+  const condition = CONDITIONS.find((c) => c.slug === params.slug)
+  if (!condition) return {}
   return {
-    title: name.charAt(0).toUpperCase() + name.slice(1),
-    description: `Clinical information on ${name} — part of the Missed Bladder Disease educational initiative.`,
+    title: condition.name,
+    description: `Clinical information on ${condition.name} — part of the Missed Bladder Disease educational initiative.`,
   }
-}
-
-const conditionContent: Record<string, {
-  name: string
-  category: string
-  overview: string
-  symptoms: string[]
-  pathophysiology: string
-  treatment: string
-}> = {
-  'interstitial-cystitis': {
-    name: 'Interstitial Cystitis / BPS',
-    category: 'I — Interstitial',
-    overview: 'Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS) is a chronic condition characterised by bladder pain or pressure with urgency and frequency, in the absence of identifiable infection or other pathology.',
-    symptoms: ['Suprapubic pain worsening with bladder filling', 'Urinary urgency and frequency (>8/day)', 'Nocturia', 'Pelvic pressure', 'Dyspareunia'],
-    pathophysiology: 'Urothelial GAG layer deficiency allows urinary irritants to penetrate the bladder wall, triggering mast cell activation, neurogenic inflammation, and eventually central sensitization.',
-    treatment: 'IC/BPS care should remain focused on early recognition, symptom tracking, and Pentosan Polysulfate Sodium (Elmiron®) product information where PPS therapy is clinically appropriate.',
-  },
-  'mast-cell-cystitis': {
-    name: 'Mast Cell Cystitis',
-    category: 'M — Microbiome / Mast Cell',
-    overview: 'Mast Cell Cystitis is characterized by elevated mast cell density (>28 cells/mm²) in the detrusor muscle, with histamine-driven bladder inflammation and hypersensitivity.',
-    symptoms: ['Severe urgency', 'Pelvic burning pain', 'Urticaria (in systemic mast cell disease)', 'Frequency', 'Recurrent symptoms with triggers (foods, stress)'],
-    pathophysiology: 'Activated mast cells release histamine, tryptase, and prostaglandins, increasing urothelial permeability and sensitizing bladder afferents.',
-    treatment: 'When symptoms overlap with IC/BPS, evaluate the bladder pain pattern and consider PPS-focused product information through Elmiron where clinically appropriate.',
-  },
 }
 
 export default function ConditionPage({ params }: { params: { slug: string } }) {
-  const condition = conditionContent[params.slug] ?? {
-    name: params.slug.replace(/-/g, ' '),
-    category: 'Bladder Condition',
-    overview: 'Detailed clinical information for this condition is being prepared. Please check back soon.',
-    symptoms: [],
-    pathophysiology: '',
-    treatment: '',
-  }
+  const condition = CONDITIONS.find((c) => c.slug === params.slug)
+  if (!condition) notFound()
 
   return (
     <>
@@ -66,12 +33,21 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
         {/* Hero */}
         <section className="bg-sage-pale py-24">
           <div className="max-w-4xl mx-auto px-6">
-            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
+            <Link
+              href="/conditions"
+              className="inline-flex items-center gap-2 font-body text-[0.72rem] tracking-[0.12em] uppercase text-muted hover:text-charcoal transition-colors mb-6"
+            >
+              ← All Conditions
+            </Link>
+            <span className="block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
               {condition.category}
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-4">
               {condition.name}
             </h1>
+            <p className="font-body text-base text-muted font-light leading-relaxed max-w-2xl">
+              {condition.description}
+            </p>
           </div>
         </section>
 
@@ -83,6 +59,7 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
           </div>
         </section>
 
+        {/* Symptoms */}
         {condition.symptoms.length > 0 && (
           <section className="bg-sage-pale py-16 section-divider">
             <div className="max-w-4xl mx-auto px-6">
@@ -99,6 +76,7 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
           </section>
         )}
 
+        {/* Pathophysiology */}
         {condition.pathophysiology && (
           <section className="bg-cream py-16 section-divider">
             <div className="max-w-4xl mx-auto px-6">
@@ -108,15 +86,29 @@ export default function ConditionPage({ params }: { params: { slug: string } }) 
           </section>
         )}
 
+        {/* Treatment */}
         {condition.treatment && (
           <section className="bg-cream py-16 section-divider">
             <div className="max-w-4xl mx-auto px-6">
               <h2 className="font-display text-2xl font-light text-charcoal mb-4">Treatment Approach</h2>
-              <p className="font-body text-base text-muted leading-relaxed font-light">{condition.treatment}</p>
+              <p className="font-body text-base text-muted leading-relaxed font-light mb-8">{condition.treatment}</p>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href="/treatment"
+                  className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide"
+                >
+                  Full Treatment Ladder
+                </Link>
+                <Link
+                  href="/conditions"
+                  className="font-body text-sm px-6 py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors tracking-wide"
+                >
+                  All Conditions
+                </Link>
+              </div>
             </div>
           </section>
         )}
-
       </main>
       <Footer />
     </>

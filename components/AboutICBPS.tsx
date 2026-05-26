@@ -83,13 +83,13 @@ export function AboutICBPS() {
           </div>
 
           <div className="space-y-6">
-            <div className="border border-white/10 bg-white/4 p-8">
+            <div className="border border-white/10 bg-white/[0.04] p-8">
               <h3 className="font-display text-2xl font-light text-white mb-5">
                 Easy clinical examples
               </h3>
               <div className="space-y-5">
                 {examples.map((item) => (
-                  <div key={item.symptom} className="border-b border-white/8 pb-5 last:border-0 last:pb-0">
+                  <div key={item.symptom} className="border-b border-white/10 pb-5 last:border-0 last:pb-0">
                     <p className="font-body text-sm font-medium text-sage-light mb-1">
                       {item.symptom}
                     </p>

@@ -1,50 +1,17 @@
-﻿'use client'
+'use client'
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-const letters = [
-  {
-    letter: 'M',
-    title: 'Microbiome & Mast Cell',
-    body: 'Disrupted urobiome and mast cell hyperactivation contribute to urothelial inflammation, pelvic hypersensitivity, and recurrent symptoms without detectable infection.',
-    conditions: ['Mast Cell Cystitis', 'Urobiome Dysbiosis', 'Eosinophilic Cystitis'],
-  },
-  {
-    letter: 'I',
-    title: 'Interstitial Cystitis / BPS',
-    body: 'The hallmark condition — chronic bladder pain with urgency and frequency, negative urine cultures, and characteristic cystoscopic findings including Hunner lesions.',
-    conditions: ['IC/BPS (Hunner type)', 'IC/BPS (Non-Hunner)', 'Bladder Pain Syndrome'],
-  },
-  {
-    letter: 'S',
-    title: 'Stress & Somatic',
-    body: 'Psychoneuroimmune pathways link central sensitization, anxiety, and PTSD to bladder hypersensitivity. Often dismissed as psychosomatic, these are real physiological conditions.',
-    conditions: ['Central Sensitization', 'Somatic Symptom Disorder', 'Pelvic Floor Dysfunction'],
-  },
-  {
-    letter: 'S',
-    title: 'Structural Abnormalities',
-    body: 'Anatomical factors — including pelvic organ prolapse, urethral diverticulum, and mesh complications — can masquerade as or co-exist with functional bladder disorders.',
-    conditions: ['Pelvic Organ Prolapse', 'Urethral Diverticulum', 'Mesh Complication'],
-  },
-  {
-    letter: 'E',
-    title: 'Endometriosis & Endocrine',
-    body: 'Bladder endometriosis affects the detrusor in up to 4% of endometriosis patients. Hormonal fluctuations modulate IC/BPS symptom severity throughout the menstrual cycle.',
-    conditions: ['Bladder Endometriosis', 'Hormonal IC/BPS', 'Adenomyosis-related pain'],
-  },
-  {
-    letter: 'D',
-    title: 'Dysbiosis & Deficiency',
-    body: 'Estrogen deficiency, nutritional gaps (D3, Mg, B12), and gut-bladder axis dysbiosis compound urothelial vulnerability, particularly in peri- and post-menopausal women.',
-    conditions: ['Estrogen-deficiency Cystitis', 'Atrophic Vaginitis', 'Nutritional Bladder Syndrome'],
-  },
-]
+import { MISSED_CATEGORIES } from '@/lib/data'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.4, 0, 0.2, 1] } },
+}
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1 } },
 }
 
 export function MistAcronym() {
@@ -65,12 +32,12 @@ export function MistAcronym() {
 
         <motion.div
           ref={ref}
+          variants={stagger}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
-          transition={{ staggerChildren: 0.1 }}
           className="space-y-0"
         >
-          {letters.map((item, i) => (
+          {MISSED_CATEGORIES.map((item, i) => (
             <motion.div
               key={i}
               variants={fadeUp}
@@ -107,4 +74,3 @@ export function MistAcronym() {
     </section>
   )
 }
-

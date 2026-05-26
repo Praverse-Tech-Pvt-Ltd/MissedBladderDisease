@@ -13,15 +13,15 @@ export default function TreatmentPage() {
     <>
       <Nav />
       <main className="pt-20">
-        <section className="bg-sage-pale py-24">
+        <section className="bg-sage-deep py-24">
           <div className="max-w-4xl mx-auto px-6">
-            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
+            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-white/60 mb-4">
               Management
             </span>
-            <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-light text-white leading-tight mb-6">
               The IC/BPS treatment ladder
             </h1>
-            <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
+            <p className="font-body text-lg text-white/70 font-light leading-relaxed max-w-2xl">
               IC/BPS education on this site is focused on early recognition, PPS therapy, and
               product information through Elmiron.
             </p>

@@ -56,6 +56,7 @@ export function ProductCTA() {
                 { label: 'FDA Approval', value: 'IC/BPS — Approved' },
                 { label: 'Standard Dose', value: '100mg TDS (oral)' },
                 { label: 'Product Site', value: 'elmiron.in' },
+                { label: 'Manufacturer', value: 'Swati Pentose Pvt Ltd' },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between border-b border-sage/15 pb-3">
                   <dt className="font-body text-[0.7rem] text-muted uppercase tracking-wide">{item.label}</dt>

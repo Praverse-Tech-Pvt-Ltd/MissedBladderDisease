@@ -1,40 +1,8 @@
-﻿'use client'
+'use client'
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-const steps = [
-  {
-    n: '01',
-    title: 'Urothelial Barrier Disruption',
-    body: 'Loss of GAG layer integrity allows urinary solutes (potassium, acid) to penetrate the urothelium, triggering subepithelial inflammation.',
-  },
-  {
-    n: '02',
-    title: 'Mast Cell Activation',
-    body: 'Tryptase and histamine released by activated mast cells increase vascular permeability and sensitize afferent C-fibers in the lamina propria.',
-  },
-  {
-    n: '03',
-    title: 'Neurogenic Inflammation',
-    body: 'Substance P and CGRP release from sensitized nerves perpetuate the inflammatory cascade through a neurogenic-immune feedback loop.',
-  },
-  {
-    n: '04',
-    title: 'Detrusor Instability',
-    body: 'Inflammatory mediators and urothelial ATP release activate purinergic receptors on smooth muscle, contributing to detrusor overactivity.',
-  },
-  {
-    n: '05',
-    title: 'Central Sensitization',
-    body: 'Chronic peripheral nociception leads to spinal cord wind-up and cortical reorganization, amplifying pain signals and broadening the pain field.',
-  },
-  {
-    n: '06',
-    title: 'Symptom Complex',
-    body: 'The culminating presentation: suprapubic pain, urinary urgency/frequency, dyspareunia, and pelvic floor hypertonicity — often misdiagnosed for years.',
-  },
-]
+import { PATHOPHYSIOLOGY_STEPS } from '@/lib/data'
 
 export function PathophysiologyGrid() {
   const ref = useRef(null)
@@ -59,7 +27,7 @@ export function PathophysiologyGrid() {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.1 } } }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
         >
-          {steps.map((step) => (
+          {PATHOPHYSIOLOGY_STEPS.map((step) => (
             <motion.div
               key={step.n}
               variants={{
@@ -68,11 +36,11 @@ export function PathophysiologyGrid() {
               }}
               className="bg-white p-8 border border-sage/20 relative group hover:border-sage/40 transition-colors"
             >
-              <span className="absolute top-4 right-6 font-display text-6xl font-light text-sage/8 group-hover:text-sage/12 transition-colors select-none">
+              <span className="absolute top-4 right-6 font-display text-6xl font-light text-sage/10 group-hover:text-sage/15 transition-colors select-none">
                 {step.n}
               </span>
               <span className="inline-block text-[0.62rem] font-body tracking-[0.15em] uppercase text-sage-deep/60 mb-3">
-                Step {step.n}
+                {step.step}
               </span>
               <h3 className="font-display text-lg font-light text-charcoal mb-3 leading-snug relative">
                 {step.title}
@@ -87,4 +55,3 @@ export function PathophysiologyGrid() {
     </section>
   )
 }
-

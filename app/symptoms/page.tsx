@@ -13,15 +13,15 @@ export default function SymptomsPage() {
     <>
       <Nav />
       <main className="pt-20">
-        <section className="bg-sage-pale py-24">
+        <section className="bg-sage py-24">
           <div className="max-w-4xl mx-auto px-6">
-            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4">
+            <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-white/60 mb-4">
               Clinical Presentation
             </span>
-            <h1 className="font-display text-5xl md:text-6xl font-light text-charcoal leading-tight mb-6">
+            <h1 className="font-display text-5xl md:text-6xl font-light text-white leading-tight mb-6">
               Recognising IC/BPS symptoms
             </h1>
-            <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
+            <p className="font-body text-lg text-white/70 font-light leading-relaxed max-w-2xl">
               The symptom complex of IC/BPS overlaps significantly with conditions like OAB,
               endometriosis, and recurrent UTI. Understanding the nuances allows earlier diagnosis
               and prevents years of unnecessary suffering.

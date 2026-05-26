@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 
@@ -14,7 +14,7 @@ const lines = [
       'IC/BPS counselling',
       'Assess suitability for PPS therapy',
     ],
-    product: null,
+    product: null as null | { name: string; href: string },
   },
   {
     id: 'second',
@@ -53,7 +53,7 @@ const lines = [
       'Reinforce PPS treatment expectations',
       'Refer to Elmiron product information',
     ],
-    product: null,
+    product: null as null | { name: string; href: string },
   },
   {
     id: 'fifth',
@@ -66,7 +66,7 @@ const lines = [
       'PPS-focused product counselling',
       'Elmiron product site referral',
     ],
-    product: null,
+    product: null as null | { name: string; href: string },
   },
 ]
 
@@ -86,9 +86,26 @@ export function TreatmentLadder() {
           </h2>
         </div>
 
+        {/* Mobile: horizontal scrollable pill tabs */}
+        <div className="flex md:hidden gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
+          {lines.map((line) => (
+            <button
+              key={line.id}
+              onClick={() => setActive(line.id)}
+              className={`flex-none px-4 py-2 text-[0.7rem] font-body tracking-[0.12em] uppercase whitespace-nowrap transition-colors border ${
+                active === line.id
+                  ? 'bg-sage text-white border-sage'
+                  : 'bg-white text-muted border-sage/20 hover:border-sage/50'
+              }`}
+            >
+              {line.label}
+            </button>
+          ))}
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Left nav */}
-          <div className="space-y-1">
+          {/* Left nav — desktop only */}
+          <div className="hidden md:block space-y-1">
             {lines.map((line) => (
               <button
                 key={line.id}
@@ -107,8 +124,8 @@ export function TreatmentLadder() {
             ))}
           </div>
 
-          {/* Right content */}
-          <div className="md:col-span-2 bg-white p-10 border border-sage/20">
+          {/* Content panel */}
+          <div className="md:col-span-2 bg-white p-8 md:p-10 border border-sage/20">
             <span className="inline-block text-[0.65rem] font-body tracking-[0.15em] uppercase text-sage-deep mb-3">
               {current.label}
             </span>
@@ -129,15 +146,13 @@ export function TreatmentLadder() {
                 <span className="font-body text-[0.65rem] tracking-[0.15em] uppercase text-sage-deep block mb-2">
                   Product Information
                 </span>
-                <div className="flex items-center justify-between gap-4">
-                  <span className="font-display text-xl font-light text-charcoal">
-                    {current.product.name}
-                  </span>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                  <span className="font-display text-xl font-light text-charcoal">{current.product.name}</span>
                   <a
                     href={current.product.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-body text-sm px-5 py-2.5 bg-sage text-white hover:bg-sage-deep transition-colors tracking-wide"
+                    className="font-body text-sm px-5 py-2.5 bg-sage text-white hover:bg-sage-deep transition-colors tracking-wide whitespace-nowrap"
                   >
                     Visit Product Site ↗
                   </a>
@@ -150,4 +165,3 @@ export function TreatmentLadder() {
     </section>
   )
 }
-

@@ -32,6 +32,16 @@
     border-top: 0.5px solid rgba(138, 171, 138, 0.25);
   }
 
+  .section-pad {
+    padding: 7rem 6rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-pad {
+      padding: 5rem 2rem;
+    }
+  }
+
   .disclaimer-bar {
     @apply bg-charcoal text-white/60 text-[0.7rem] text-center py-2 tracking-wide;
   }
@@ -40,6 +50,18 @@
   .ladder-item-active {
     border-left: 2px solid #8aab8a;
     color: #2c2c2a;
+  }
+
+  /* Sage border utility */
+  .border-sage-line {
+    border: 0.5px solid rgba(138, 171, 138, 0.25);
+  }
+}
+
+@layer base {
+  :focus-visible {
+    outline: 2px solid #8aab8a;
+    outline-offset: 3px;
   }
 }
 

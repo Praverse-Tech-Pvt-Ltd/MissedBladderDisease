@@ -1,58 +1,8 @@
-﻿'use client'
+'use client'
 
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
-
-const symptoms = [
-  {
-    name: 'Pelvic Pain',
-    description: 'Suprapubic or perineal pain worsening with bladder filling and relieved by voiding. The cardinal symptom of IC/BPS.',
-    severity: 'HIGH',
-    severityColor: 'bg-sage-deep',
-  },
-  {
-    name: 'Urinary Urgency',
-    description: 'Sudden, compelling desire to void that is difficult to defer. Different from OAB urgency — often driven by pain anticipation.',
-    severity: 'HIGH',
-    severityColor: 'bg-sage-deep',
-  },
-  {
-    name: 'Urinary Frequency',
-    description: 'Voiding >8 times/day and often multiple times nightly. Average IC patient voids 16–60 times daily in severe cases.',
-    severity: 'HIGH',
-    severityColor: 'bg-sage-deep',
-  },
-  {
-    name: 'Dyspareunia',
-    description: 'Pelvic pain during or after sexual intercourse due to inflamed bladder wall proximity to vaginal structures.',
-    severity: 'MODERATE',
-    severityColor: 'bg-sage',
-  },
-  {
-    name: 'Nocturia',
-    description: 'Waking ≥2 times per night to void. Disrupts sleep quality and is a major contributor to quality-of-life impairment.',
-    severity: 'MODERATE',
-    severityColor: 'bg-sage',
-  },
-  {
-    name: 'Pelvic Floor Tension',
-    description: 'Hypertonic pelvic floor muscles secondary to chronic pain guarding. Often mistaken for vaginismus or pudendal neuralgia.',
-    severity: 'MODERATE',
-    severityColor: 'bg-sage',
-  },
-  {
-    name: 'Hematuria',
-    description: 'Microscopic or gross hematuria present in ~10% of cases. Requires cystoscopy to exclude malignancy before IC diagnosis.',
-    severity: 'VARIABLE',
-    severityColor: 'bg-sage-light',
-  },
-  {
-    name: 'Vulvodynia',
-    description: 'Chronic vulvar pain without identifiable cause, frequently co-existing with IC/BPS due to shared pelvic sensitization.',
-    severity: 'VARIABLE',
-    severityColor: 'bg-sage-light',
-  },
-]
+import { SYMPTOMS } from '@/lib/data'
 
 export function SymptomsGrid() {
   const ref = useRef(null)
@@ -77,7 +27,7 @@ export function SymptomsGrid() {
           variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.08 } } }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         >
-          {symptoms.map((s) => (
+          {SYMPTOMS.map((s) => (
             <motion.div
               key={s.name}
               variants={{
@@ -86,12 +36,18 @@ export function SymptomsGrid() {
               }}
               className="bg-white p-6 border border-sage/20 hover:border-sage/40 transition-colors group"
             >
-              {/* Severity bar */}
-              <div className={`w-full h-1 ${s.severityColor} mb-4`} />
+              {/* Proportional severity bar */}
+              <div className="w-full bg-sage/10 h-1 mb-4">
+                <div
+                  className={`h-1 ${s.severityColor} transition-all`}
+                  style={{ width: `${s.severityPercent}%` }}
+                />
+              </div>
 
               <div className="flex justify-between items-start mb-3">
                 <h3 className="font-display text-lg font-light text-charcoal leading-snug">{s.name}</h3>
-                <span className="font-body text-[0.55rem] tracking-[0.12em] uppercase text-muted flex-none ml-2 mt-1">
+                <span className={`flex-none ml-2 mt-1.5 inline-flex items-center gap-1.5 px-2 py-0.5 text-[0.58rem] font-body tracking-[0.1em] uppercase border ${s.severityBadge}`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${s.severityColor} flex-none`} />
                   {s.severity}
                 </span>
               </div>
@@ -117,4 +73,3 @@ export function SymptomsGrid() {
     </section>
   )
 }
-

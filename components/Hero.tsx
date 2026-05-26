@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
@@ -15,28 +15,28 @@ const fadeUp = {
 
 export function Hero() {
   return (
-    <section className="min-h-screen bg-cream flex items-center pt-20">
+    <section className="min-h-screen bg-charcoal flex items-center pt-16">
       <div className="max-w-6xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left */}
         <motion.div variants={stagger} initial="hidden" animate="visible">
           <motion.span
             variants={fadeUp}
-            className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-4"
+            className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-light mb-4"
           >
             Physician Education Initiative
           </motion.span>
 
           <motion.h1
             variants={fadeUp}
-            className="font-display text-5xl md:text-6xl font-light leading-tight text-charcoal mb-4"
+            className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-4"
           >
             The bladder conditions{' '}
-            <em className="italic text-sage-deep">we keep missing</em>
+            <em className="italic text-sage-light">we keep missing</em>
           </motion.h1>
 
           <motion.p
             variants={fadeUp}
-            className="font-body text-base text-muted leading-relaxed mb-8 max-w-md font-light"
+            className="font-body text-base text-white/60 leading-relaxed mb-8 max-w-md font-light"
           >
             Millions of women with Interstitial Cystitis, Bladder Pain Syndrome, and related
             conditions go undiagnosed for 5–7 years. This initiative exists to close that gap.
@@ -51,7 +51,7 @@ export function Hero() {
             </Link>
             <Link
               href="#about-icbps"
-              className="font-body text-sm px-6 py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-colors tracking-wide"
+              className="font-body text-sm px-6 py-3 border border-white/30 text-white hover:bg-white hover:text-charcoal transition-colors tracking-wide"
             >
               Understand IC/BPS
             </Link>
@@ -60,7 +60,7 @@ export function Hero() {
           {/* Stats */}
           <motion.div
             variants={fadeUp}
-            className="grid grid-cols-3 gap-6 pt-8 border-t border-sage/20"
+            className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10"
           >
             {[
               { num: '5–7', label: 'Avg. years to diagnosis' },
@@ -68,8 +68,8 @@ export function Hero() {
               { num: '6', label: 'MISSED categories' },
             ].map((s) => (
               <div key={s.num}>
-                <div className="font-display text-2xl font-light text-sage-deep">{s.num}</div>
-                <div className="font-body text-[0.7rem] text-muted uppercase tracking-wide mt-0.5">
+                <div className="font-display text-2xl font-light text-sage-light">{s.num}</div>
+                <div className="font-body text-[0.7rem] text-white/40 uppercase tracking-wide mt-0.5">
                   {s.label}
                 </div>
               </div>
@@ -82,7 +82,7 @@ export function Hero() {
           initial={{ opacity: 0, x: 40 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.3, ease: [0.4, 0, 0.2, 1] }}
-          className="bg-charcoal p-12 min-h-[480px] flex flex-col justify-center"
+          className="border border-white/10 p-12 min-h-[480px] flex flex-col justify-center"
         >
           <p className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/30 mb-8">
             The Diagnostic Framework
@@ -96,7 +96,7 @@ export function Hero() {
               { letter: 'E', label: 'Endometriosis / Endocrine' },
               { letter: 'D', label: 'Dysbiosis / Deficiency' },
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-5 border-b border-white/8 pb-4">
+              <div key={i} className="flex items-center gap-5 border-b border-white/10 pb-4 last:border-0">
                 <span className="font-display text-4xl font-light text-sage w-10 flex-none">
                   {item.letter}
                 </span>
@@ -109,4 +109,3 @@ export function Hero() {
     </section>
   )
 }
-
