@@ -22,9 +22,8 @@ export default function TreatmentPage() {
               The IC/BPS treatment ladder
             </h1>
             <p className="font-body text-lg text-muted font-light leading-relaxed max-w-2xl">
-              IC/BPS is managed stepwise from conservative measures to interventional procedures.
-              A multimodal approach — addressing pain, urothelial function, and psychological
-              wellbeing — achieves the best outcomes.
+              IC/BPS education on this site is focused on early recognition, PPS therapy, and
+              product information through Elmiron.
             </p>
           </div>
         </section>

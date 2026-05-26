@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_IN',
-    url: 'https://missedbladder.com',
+    url: 'https://missedbladderdisease.com',
     siteName: 'Missed Bladder Disease',
   },
 }
