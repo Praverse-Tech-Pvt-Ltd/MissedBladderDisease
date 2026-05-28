@@ -55,6 +55,7 @@ export function ProductCTA() {
                 { label: 'Formulations', value: 'Oral 100mg Capsules · Intravesical 50mg/mL' },
                 { label: 'FDA Approval', value: 'IC/BPS — Approved' },
                 { label: 'Standard Dose', value: '100mg TDS (oral)' },
+                { label: 'Manufactured by', value: 'Polysaccharide Chemistry Pvt Ltd' },
                 { label: 'Product Site', value: 'elmiron.in' },
                 { label: 'Manufacturer', value: 'Swati Pentose Pvt Ltd' },
               ].map((item) => (

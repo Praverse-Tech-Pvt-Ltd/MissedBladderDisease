@@ -5,8 +5,6 @@ export function Footer() {
     <footer className="bg-charcoal text-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-
-          {/* Brand */}
           <div className="lg:col-span-1">
             <div className="font-display text-2xl font-light mb-3">Missed Bladder Disease</div>
             <p className="font-body text-sm text-white/50 leading-relaxed mb-4 max-w-xs">
@@ -17,9 +15,24 @@ export function Footer() {
               Led by Dr. Sanjay Pandey<br />
               Team BladderHealthWomen
             </p>
+            <div className="border-t border-sage/20 pt-4 mt-4">
+              <p className="font-body text-[0.68rem] text-white/40 tracking-wide uppercase mb-1">
+                An initiative by
+              </p>
+              <a
+                href="https://polysacc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-[0.82rem] text-sage hover:text-sage-light transition-colors tracking-wide font-medium"
+              >
+                Polysaccharide Chemistry Pvt Ltd ↗
+              </a>
+              <p className="font-body text-[0.7rem] text-white/30 mt-0.5">
+                Kalbadevi, Mumbai - 400002
+              </p>
+            </div>
           </div>
 
-          {/* Disease Education */}
           <div>
             <h4 className="font-body text-[0.72rem] tracking-[0.18em] uppercase text-white/40 mb-4">
               Education
@@ -42,7 +55,6 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Conditions */}
           <div>
             <h4 className="font-body text-[0.72rem] tracking-[0.18em] uppercase text-white/40 mb-4">
               Conditions
@@ -65,10 +77,9 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Product & Contact */}
           <div>
             <h4 className="font-body text-[0.72rem] tracking-[0.18em] uppercase text-white/40 mb-4">
-              Product & Contact
+              Network
             </h4>
             <ul className="space-y-3">
               <li>
@@ -76,45 +87,57 @@ export function Footer() {
                   href="https://elmiron.in"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-sm text-white/60 hover:text-white transition-colors"
+                  className="font-body text-sm text-sage hover:text-sage-light transition-colors"
                 >
                   Elmiron® Product Site ↗
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:elmiron@elmiron.in"
-                  className="font-body text-sm text-white/60 hover:text-white transition-colors"
+                  href="https://polysacc.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-sage hover:text-sage-light transition-colors"
                 >
-                  elmiron@elmiron.in
+                  polysacc.com ↗
                 </a>
               </li>
               <li>
-                <a
-                  href="tel:+918097253466"
-                  className="font-body text-sm text-white/60 hover:text-white transition-colors"
-                >
-                  +91 80972 53466
-                </a>
+                <Link href="/#about-icbps" className="font-body text-sm text-white/60 hover:text-white transition-colors">
+                  About IC/BPS
+                </Link>
               </li>
             </ul>
 
-            <div className="mt-6 pt-6 border-t border-white/10">
-              <p className="font-body text-xs text-white/30 leading-relaxed">
-                Manufacturer<br />
-                <span className="text-white/50">Swati Pentose Pvt Ltd</span>
+            <div className="border-t border-sage/20 pt-4 mt-6">
+              <p className="font-body text-[0.68rem] text-white/40 tracking-wide uppercase mb-2">
+                CTO &amp; Promoter
               </p>
+              <p className="font-body text-sm text-white/70 font-light mb-1">
+                Pratham Shrivastav
+              </p>
+              <a
+                href="mailto:pratham@polysacc.com"
+                className="font-body text-[0.78rem] text-sage hover:text-sage-light transition-colors"
+              >
+                pratham@polysacc.com
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-8">
-          <p className="font-body text-[0.7rem] text-white/30 leading-relaxed">
-            For educational purposes for healthcare professionals only. Content does not constitute
-            medical advice and is not a substitute for clinical judgment.
-            © {new Date().getFullYear()} Missed Bladder Disease · Swati Pentose Pvt Ltd
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-start gap-4">
+          <p className="font-body text-[0.7rem] text-white/30 leading-relaxed max-w-2xl">
+            This website is for educational purposes for healthcare professionals. Content does not
+            constitute medical advice. © {new Date().getFullYear()} Polysaccharide Chemistry Pvt Ltd.
+            All rights reserved.
           </p>
+          <a
+            href="mailto:pratham@polysacc.com"
+            className="font-body text-[0.7rem] text-white/30 hover:text-white/60 transition-colors"
+          >
+            pratham@polysacc.com
+          </a>
         </div>
       </div>
     </footer>

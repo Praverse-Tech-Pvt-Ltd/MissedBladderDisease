@@ -34,6 +34,7 @@ export function ProductSection() {
               {[
                 { label: 'Generic Name', value: 'Pentosan Polysulfate Sodium' },
                 { label: 'Therapy Area', value: 'Interstitial Cystitis / Bladder Pain Syndrome' },
+                { label: 'Manufactured by', value: 'Polysaccharide Chemistry Pvt Ltd' },
                 { label: 'Product Site', value: 'elmiron.in' },
               ].map((item) => (
                 <div key={item.label} className="flex justify-between gap-6 border-b border-sage/15 pb-3">
@@ -47,14 +48,24 @@ export function ProductSection() {
               ))}
             </dl>
 
-            <a
-              href="https://elmiron.in"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide inline-block"
-            >
-              Visit Elmiron.in ↗
-            </a>
+            <div className="flex flex-wrap gap-3">
+              <a
+                href="https://elmiron.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm px-6 py-3 bg-sage text-white hover:bg-sage-deep border border-sage hover:border-sage-deep transition-colors tracking-wide inline-block"
+              >
+                Visit Elmiron.in ↗
+              </a>
+              <a
+                href="https://polysacc.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm px-5 py-3 border border-charcoal/30 text-muted hover:border-sage hover:text-sage-deep transition-colors tracking-wide inline-block"
+              >
+                polysacc.com ↗
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>

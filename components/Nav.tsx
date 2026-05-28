@@ -23,14 +23,11 @@ export function Nav() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Lock body scroll when menu is open
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden'
-    } else {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
       document.body.style.overflow = ''
     }
-    return () => { document.body.style.overflow = '' }
   }, [menuOpen])
 
   return (
@@ -41,17 +38,19 @@ export function Nav() {
         }`}
       >
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href="/" className="flex items-center gap-3">
             <span className="font-display text-lg font-light tracking-wide text-charcoal">
               Missed Bladder Disease
             </span>
+            <span className="hidden md:inline text-[0.6rem] font-body tracking-[0.12em] text-muted uppercase border-l border-sage/30 pl-3">
+              by Polysaccharide Chemistry
+            </span>
           </Link>
 
-          {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => {
-              const isActive = link.href === '/' ? pathname === '/' : pathname.startsWith(link.href.split('#')[0]) && link.href !== '/#about-icbps'
+              const baseHref = link.href.split('#')[0]
+              const isActive = link.href === '/' ? pathname === '/' : Boolean(baseHref && pathname.startsWith(baseHref))
               return (
                 <Link
                   key={link.href}
@@ -72,9 +71,16 @@ export function Nav() {
             >
               Elmiron® ↗
             </a>
+            <a
+              href="https://polysacc.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-muted hover:text-charcoal tracking-wide transition-colors"
+            >
+              polysacc.com ↗
+            </a>
           </div>
 
-          {/* Mobile toggle */}
           <button
             className="lg:hidden flex flex-col gap-1.5 p-2 z-10"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -88,7 +94,6 @@ export function Nav() {
         </div>
       </nav>
 
-      {/* Full-screen mobile menu overlay */}
       {menuOpen && (
         <div className="fixed inset-0 z-40 bg-charcoal flex flex-col items-center justify-center lg:hidden">
           <nav className="flex flex-col items-center gap-8">
@@ -110,6 +115,15 @@ export function Nav() {
               onClick={() => setMenuOpen(false)}
             >
               Elmiron® ↗
+            </a>
+            <a
+              href="https://polysacc.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-display text-3xl font-light text-white/70 hover:text-sage-light transition-colors tracking-wide"
+              onClick={() => setMenuOpen(false)}
+            >
+              polysacc.com ↗
             </a>
           </nav>
         </div>
