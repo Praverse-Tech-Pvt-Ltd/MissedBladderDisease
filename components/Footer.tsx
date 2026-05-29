@@ -111,16 +111,19 @@ export function Footer() {
 
             <div className="border-t border-sage/20 pt-4 mt-6">
               <p className="font-body text-[0.68rem] text-white/40 tracking-wide uppercase mb-2">
-                CTO &amp; Promoter
-              </p>
-              <p className="font-body text-sm text-white/70 font-light mb-1">
-                Pratham Shrivastav
+                BD Head
               </p>
               <a
-                href="mailto:pratham@polysacc.com"
-                className="font-body text-[0.78rem] text-sage hover:text-sage-light transition-colors"
+                href="mailto:isshane.guptaa@swatispentose.com"
+                className="block font-body text-[0.78rem] text-sage hover:text-sage-light transition-colors mb-1"
               >
-                pratham@polysacc.com
+                Isshane Guptaa
+              </a>
+              <a
+                href="mailto:kanchan.londhe@swatispentose.com"
+                className="block font-body text-[0.78rem] text-sage hover:text-sage-light transition-colors"
+              >
+                Ms Kanchan Londhe
               </a>
             </div>
           </div>
@@ -132,12 +135,14 @@ export function Footer() {
             constitute medical advice. © {new Date().getFullYear()} Polysaccharide Chemistry Pvt Ltd.
             All rights reserved.
           </p>
-          <a
-            href="mailto:pratham@polysacc.com"
-            className="font-body text-[0.7rem] text-white/30 hover:text-white/60 transition-colors"
-          >
-            pratham@polysacc.com
-          </a>
+          <div className="font-body text-[0.7rem] text-white/30 leading-relaxed">
+            <a href="mailto:isshane.guptaa@swatispentose.com" className="block hover:text-white/60 transition-colors">
+              isshane.guptaa@swatispentose.com
+            </a>
+            <a href="mailto:kanchan.londhe@swatispentose.com" className="block hover:text-white/60 transition-colors">
+              kanchan.londhe@swatispentose.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>

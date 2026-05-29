@@ -9,7 +9,9 @@ const schema = z.object({
 })
 
 const fromEmail = process.env.RESEND_FROM_EMAIL ?? 'onboarding@resend.dev'
-const contactEmail = process.env.CONTACT_EMAIL ?? 'elmiron@elmiron.in'
+const contactEmail = process.env.CONTACT_EMAIL ?? 'isshane.guptaa@swatispentose.com'
+const secondaryEmail = process.env.CONTACT_SECONDARY_EMAIL ?? 'kanchan.londhe@swatispentose.com'
+const ccEmail = process.env.CONTACT_CC_EMAIL ?? 'v@v-group.in'
 
 export async function POST(req: Request) {
   const resend = new Resend(process.env.RESEND_API_KEY)
@@ -19,7 +21,8 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: fromEmail,
-      to: contactEmail,
+      to: [contactEmail, secondaryEmail],
+      cc: ccEmail,
       reply_to: data.email,
       subject: `New enquiry from ${data.name} — Missed Bladder Website`,
       html: `
