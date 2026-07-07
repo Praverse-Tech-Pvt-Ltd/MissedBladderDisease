@@ -7,11 +7,11 @@ const lines = [
     id: 'first',
     label: '1st Line',
     title: 'Education, Lifestyle & Diet Modification',
-    body: 'Patient education, trigger review, bladder diaries, and IC/BPS pattern recognition help identify patients who may need bladder-directed therapy with PPS.',
+    body: 'Educating the woman about her condition, trigger review, bladder diaries, and IC/BPS pattern recognition help identify women who may need bladder-directed therapy with PPS.',
     treatments: [
       'Symptom and voiding diary',
       'Trigger identification',
-      'IC/BPS counselling',
+      'IC/BPS counselling for women',
       'Assess suitability for PPS therapy',
     ],
     product: null as null | { name: string; href: string },
@@ -33,7 +33,7 @@ const lines = [
     id: 'third',
     label: '3rd Line',
     title: 'PPS Intravesical Option',
-    body: 'For patients who need a bladder-directed approach, PPS-based intravesical therapy may be considered through the Elmiron product pathway.',
+    body: 'For women who need a bladder-directed approach, PPS-based intravesical therapy may be considered through the Elmiron product pathway.',
     treatments: [
       'PPS Intravesical (Elmiron® 50mg/mL)',
       'Bladder-directed PPS delivery',
@@ -46,7 +46,7 @@ const lines = [
     id: 'fourth',
     label: 'Follow-up',
     title: 'Response Review',
-    body: 'Review IC/BPS symptom response, adherence, tolerability, and whether the patient needs continued PPS-based bladder care.',
+    body: 'Review IC/BPS symptom response, adherence, tolerability, and whether the woman needs continued PPS-based bladder care.',
     treatments: [
       'Track pain, urgency, and frequency',
       'Review bladder diary trends',
@@ -61,7 +61,7 @@ const lines = [
     title: 'Ongoing IC/BPS Education',
     body: 'Keep the discussion focused on missed bladder disease recognition, IC/BPS diagnosis, and PPS therapy through Elmiron.',
     treatments: [
-      'Patient education on chronicity',
+      'Education for the woman on chronicity',
       'Symptom flare documentation',
       'PPS-focused product counselling',
       'Elmiron product site referral',
@@ -79,10 +79,10 @@ export function TreatmentLadder() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
-            Treatment Pathway
+            Treatment Pathway for Women
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight">
-            The IC/BPS treatment ladder
+            The IC/BPS treatment ladder for women
           </h2>
         </div>
 

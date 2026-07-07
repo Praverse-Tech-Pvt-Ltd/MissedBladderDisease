@@ -19,18 +19,19 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "Missed Bladder Disease",
-    template: "%s | Missed Bladder Disease",
+    default: "Missed Bladder Disease in Women",
+    template: "%s | Missed Bladder Disease in Women",
   },
   description:
-    "Understanding IC/BPS and overlooked bladder conditions in women. Led by Dr. Sanjay Pandey.",
+    "IC/BPS affects women 5-10x more than men, yet takes years to diagnose. A physician education initiative on the bladder conditions overlooked in women's health. Led by Dr. Sanjay Pandey.",
   keywords: [
-    'missed bladder disease',
+    'missed bladder disease in women',
     'interstitial cystitis women',
-    'bladder pain syndrome',
-    'IC BPS India',
+    'bladder pain syndrome women',
+    'women\'s bladder health India',
+    'IC BPS women India',
     'Dr Sanjay Pandey',
-    'bladder health',
+    'women\'s pelvic health',
   ],
   openGraph: {
     type: 'website',

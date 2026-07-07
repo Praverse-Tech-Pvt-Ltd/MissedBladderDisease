@@ -24,8 +24,8 @@ export function ProductSection() {
               Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup>
             </h2>
             <p className="font-body text-base text-muted leading-relaxed font-light max-w-xl">
-              For product-specific information, formulations, and prescribing resources, visit the
-              official Elmiron product website directly.
+              For product-specific information, formulations, and prescribing resources for
+              treating women with IC/BPS, visit the official Elmiron product website directly.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export function ProductSection() {
             <dl className="space-y-3 mb-7">
               {[
                 { label: 'Generic Name', value: 'Pentosan Polysulfate Sodium' },
-                { label: 'Therapy Area', value: 'Interstitial Cystitis / Bladder Pain Syndrome' },
+                { label: 'Therapy Area', value: 'Interstitial Cystitis / Bladder Pain Syndrome in Women' },
                 { label: 'Manufactured by', value: 'Polysaccharide Chemistry Pvt Ltd' },
                 { label: 'Product Site', value: 'elmiron.in' },
               ].map((item) => (

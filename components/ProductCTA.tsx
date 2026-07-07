@@ -18,15 +18,16 @@ export function ProductCTA() {
         >
           <div>
             <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
-              First-line Oral Therapy
+              First-line Oral Therapy for Women with IC/BPS
             </span>
             <h2 className="font-display text-4xl font-light text-charcoal leading-tight mb-4">
-              Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup> for IC/BPS
+              Elmiron<sup className="text-[0.4em] text-muted ml-1">®</sup> for IC/BPS in women
             </h2>
             <p className="font-body text-base text-muted leading-relaxed mb-6 font-light">
               Pentosan Polysulfate Sodium 100mg — the only FDA-approved oral therapy for
-              IC/BPS. Restores the urothelial GAG layer and reduces bladder wall inflammation.
-              Available in oral and intravesical formulations.
+              IC/BPS, a condition that overwhelmingly affects women. Restores the urothelial
+              GAG layer and reduces bladder wall inflammation. Available in oral and
+              intravesical formulations.
             </p>
             <div className="flex flex-wrap gap-3">
               <a

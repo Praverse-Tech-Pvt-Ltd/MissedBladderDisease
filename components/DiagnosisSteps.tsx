@@ -8,7 +8,7 @@ const steps = [
   {
     n: '01',
     title: 'Symptom Assessment',
-    body: "Apply validated tools: ICSI/ICPI (IC Symptom/Problem Index), PUF score, and O'Leary-Sant questionnaire. Minimum 6 weeks of symptoms required for diagnosis.",
+    body: "Apply validated tools: ICSI/ICPI (IC Symptom/Problem Index), PUF score, and O'Leary-Sant questionnaire with the woman presenting. Minimum 6 weeks of symptoms required for diagnosis.",
     tools: ['ICSI/ICPI', 'PUF Score', "O'Leary-Sant"],
   },
   {
@@ -32,7 +32,7 @@ const steps = [
   {
     n: '05',
     title: 'Differential Exclusion',
-    body: 'Exclude endometriosis, pelvic floor dysfunction, pudendal neuralgia, bladder malignancy, radiation cystitis. Multidisciplinary assessment recommended.',
+    body: 'Exclude endometriosis, pelvic floor dysfunction, pudendal neuralgia, bladder malignancy, radiation cystitis — conditions that commonly co-occur or overlap in women. Multidisciplinary assessment recommended.',
     tools: ['Pelvic USS', 'Urodynamics', 'Laparoscopy if needed'],
   },
   {
@@ -52,10 +52,10 @@ export function DiagnosisSteps() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
-            Diagnostic Pathway
+            Diagnostic Pathway for Women
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight">
-            A structured approach to diagnosis
+            A structured approach to diagnosing women with IC/BPS
           </h2>
         </div>
 

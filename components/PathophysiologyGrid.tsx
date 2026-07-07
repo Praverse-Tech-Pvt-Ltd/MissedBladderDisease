@@ -13,10 +13,10 @@ export function PathophysiologyGrid() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
-            Pathophysiology
+            Pathophysiology in Women
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight max-w-xl">
-            The IC/BPS disease cascade
+            The IC/BPS disease cascade in the female bladder
           </h2>
         </div>
 

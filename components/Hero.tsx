@@ -32,20 +32,20 @@ export function Hero() {
             variants={fadeUp}
             className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-light mb-4"
           >
-            Physician Education Initiative
+            A Women's Bladder Health Initiative
           </motion.span>
 
           <motion.h1
             variants={fadeUp}
             className="font-display text-5xl md:text-6xl font-light leading-tight text-white mb-4"
           >
-            The bladder conditions{' '}
+            The bladder disease{' '}
             <GradientText
               colors={['#b8cdb8', '#ffffff', '#8aab8a', '#b8cdb8']}
               animationSpeed={5}
               className="italic"
             >
-              we keep missing
+              women keep being told isn't real
             </GradientText>
           </motion.h1>
 
@@ -53,8 +53,9 @@ export function Hero() {
             variants={fadeUp}
             className="font-body text-base text-white/60 leading-relaxed mb-8 max-w-md font-light"
           >
-            Millions of women with Interstitial Cystitis, Bladder Pain Syndrome, and related
-            conditions go undiagnosed for 5–7 years. This initiative exists to close that gap.
+            Interstitial Cystitis and Bladder Pain Syndrome affect women 5–10 times more often
+            than men, yet the average woman waits 5–7 years and sees five physicians before
+            getting the right diagnosis. This initiative exists to close that gap.
           </motion.p>
 
           <motion.div variants={fadeUp} className="flex flex-wrap gap-4 mb-12">
@@ -68,16 +69,16 @@ export function Hero() {
               href="#about-icbps"
               className="font-body text-sm px-6 py-3 border border-white/30 text-white hover:bg-white hover:text-charcoal transition-colors tracking-wide"
             >
-              Understand IC/BPS
+              Understand IC/BPS in Women
             </Link>
           </motion.div>
 
           {/* Stats */}
           <motion.div variants={fadeUp} className="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
             {[
-              { num: '5–7', label: 'Avg. years to diagnosis' },
-              { num: '90%', label: 'Cases in women' },
-              { num: '6', label: 'MISSED categories' },
+              { num: '5–7', label: 'Years women wait for diagnosis' },
+              { num: '90%', label: 'Of IC/BPS patients are women' },
+              { num: '6', label: 'MISSED categories in women\'s bladder health' },
             ].map((s) => (
               <div key={s.num}>
                 <div className="font-display text-2xl font-light text-sage-light">{s.num}</div>
@@ -95,7 +96,7 @@ export function Hero() {
           className="border border-white/10 p-12 min-h-[480px] flex flex-col justify-center"
         >
           <p className="font-body text-[0.65rem] tracking-[0.2em] uppercase text-white/30 mb-8">
-            The Diagnostic Framework
+            The Diagnostic Framework for Women
           </p>
           <div className="space-y-4">
             {[

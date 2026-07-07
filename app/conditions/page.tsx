@@ -5,8 +5,8 @@ import { Footer } from '@/components/Footer'
 import { CONDITIONS } from '@/lib/data'
 
 export const metadata: Metadata = {
-  title: 'Conditions',
-  description: 'Bladder conditions within the MISSED framework — from IC/BPS to neurogenic bladder and beyond.',
+  title: 'Conditions in Women',
+  description: 'Bladder conditions in women within the MISSED framework — from IC/BPS to neurogenic bladder and beyond.',
 }
 
 const categoryColor: Record<string, string> = {
@@ -26,15 +26,16 @@ export default function ConditionsPage() {
         <section className="bg-charcoal py-24">
           <div className="max-w-4xl mx-auto px-6">
             <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-light mb-4">
-              The MISSED Framework
+              The MISSED Framework for Women
             </span>
             <h1 className="font-display text-5xl md:text-6xl font-light text-white leading-tight mb-6">
               Bladder conditions we<br />
-              <em className="italic text-sage-light">keep missing</em>
+              <em className="italic text-sage-light">keep missing in women</em>
             </h1>
             <p className="font-body text-base text-white/60 leading-relaxed max-w-2xl font-light">
               Seven overlapping conditions that are routinely misdiagnosed, undertreated, or dismissed
-              in women's healthcare. Each falls within one or more categories of the MISSED diagnostic framework.
+              in women's healthcare — where IC/BPS alone affects women 5–10 times more often than men.
+              Each falls within one or more categories of the MISSED diagnostic framework.
             </p>
           </div>
         </section>
@@ -94,11 +95,11 @@ export default function ConditionsPage() {
         <section className="bg-sage-pale py-16 section-divider">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <h2 className="font-display text-3xl font-light text-charcoal mb-4">
-              Treatment begins with the right diagnosis
+              Treatment begins with the right diagnosis for women
             </h2>
             <p className="font-body text-base text-muted font-light mb-8 max-w-xl mx-auto">
               Many of these conditions respond to GAG layer restoration therapy. Explore the treatment
-              pathway and the role of Elmiron® in IC/BPS management.
+              pathway and the role of Elmiron® in managing IC/BPS in women.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link

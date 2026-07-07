@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navLinks = [
-  { label: 'About IC/BPS', href: '/#about-icbps' },
+  { label: "Women's IC/BPS", href: '/#about-icbps' },
   { label: 'Conditions', href: '/conditions' },
   { label: 'Symptoms', href: '/symptoms' },
   { label: 'Diagnosis', href: '/diagnosis' },
@@ -40,7 +40,7 @@ export function Nav() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <span className="font-display text-lg font-light tracking-wide text-charcoal">
-              Missed Bladder Disease
+              Missed Bladder Disease in Women
             </span>
             <span className="hidden md:inline text-[0.6rem] font-body tracking-[0.12em] text-muted uppercase border-l border-sage/30 pl-3">
               by Polysaccharide Chemistry

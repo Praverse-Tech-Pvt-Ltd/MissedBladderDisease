@@ -4,31 +4,31 @@ export const MISSED_CATEGORIES = [
   {
     letter: 'M',
     title: 'Microbiome & Mast Cell',
-    body: 'Disrupted urobiome and mast cell hyperactivation contribute to urothelial inflammation, pelvic hypersensitivity, and recurrent symptoms without detectable infection.',
+    body: 'Disrupted urobiome and mast cell hyperactivation contribute to urothelial inflammation, pelvic hypersensitivity, and recurrent symptoms without detectable infection — a pattern seen disproportionately in women.',
     conditions: ['Mast Cell Cystitis', 'Urobiome Dysbiosis', 'Eosinophilic Cystitis'],
   },
   {
     letter: 'I',
     title: 'Interstitial Cystitis / BPS',
-    body: 'The hallmark condition — chronic bladder pain with urgency and frequency, negative urine cultures, and characteristic cystoscopic findings including Hunner lesions.',
+    body: 'The hallmark condition in women\'s bladder health — chronic bladder pain with urgency and frequency, negative urine cultures, and characteristic cystoscopic findings including Hunner lesions.',
     conditions: ['IC/BPS (Hunner type)', 'IC/BPS (Non-Hunner)', 'Bladder Pain Syndrome'],
   },
   {
     letter: 'S',
     title: 'Stress & Somatic',
-    body: 'Psychoneuroimmune pathways link central sensitization, anxiety, and PTSD to bladder hypersensitivity. Often dismissed as psychosomatic, these are real physiological conditions.',
+    body: 'Psychoneuroimmune pathways link central sensitization, anxiety, and PTSD to bladder hypersensitivity. In women, this is too often dismissed as psychosomatic or "just stress" — these are real, treatable physiological conditions.',
     conditions: ['Central Sensitization', 'Somatic Symptom Disorder', 'Pelvic Floor Dysfunction'],
   },
   {
     letter: 'S',
     title: 'Structural Abnormalities',
-    body: 'Anatomical factors — including pelvic organ prolapse, urethral diverticulum, and mesh complications — can masquerade as or co-exist with functional bladder disorders.',
+    body: 'Anatomical factors specific to women — including pelvic organ prolapse, urethral diverticulum, and mesh complications — can masquerade as or co-exist with functional bladder disorders.',
     conditions: ['Pelvic Organ Prolapse', 'Urethral Diverticulum', 'Mesh Complication'],
   },
   {
     letter: 'E',
     title: 'Endometriosis & Endocrine',
-    body: 'Bladder endometriosis affects the detrusor in up to 4% of endometriosis patients. Hormonal fluctuations modulate IC/BPS symptom severity throughout the menstrual cycle.',
+    body: 'Bladder endometriosis affects the detrusor in up to 4% of women with endometriosis. Hormonal fluctuations modulate IC/BPS symptom severity throughout the menstrual cycle.',
     conditions: ['Bladder Endometriosis', 'Hormonal IC/BPS', 'Adenomyosis-related pain'],
   },
   {
@@ -46,8 +46,8 @@ export const CONDITIONS = [
     slug: 'interstitial-cystitis',
     name: 'Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS)',
     category: 'I — Interstitial',
-    description: 'The primary chronic condition characterized by bladder pain, urgency, and frequency without identifiable infection or other obvious pathology.',
-    overview: 'Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS) is a chronic condition characterised by bladder pain or pressure with urgency and frequency, in the absence of identifiable infection or other pathology. The average patient sees five physicians over seven years before receiving a correct diagnosis.',
+    description: 'The primary chronic bladder condition in women, characterized by bladder pain, urgency, and frequency without identifiable infection or other obvious pathology.',
+    overview: 'Interstitial Cystitis / Bladder Pain Syndrome (IC/BPS) is a chronic condition characterised by bladder pain or pressure with urgency and frequency, in the absence of identifiable infection or other pathology. Nine in ten patients are women, and the average woman sees five physicians over seven years before receiving a correct diagnosis.',
     symptoms: [
       'Suprapubic pain worsening with bladder filling',
       'Urinary urgency and frequency (>8/day)',
@@ -62,7 +62,7 @@ export const CONDITIONS = [
     slug: 'bladder-pain-syndrome',
     name: 'Bladder Pain Syndrome',
     category: 'I — Interstitial',
-    description: 'A broader diagnostic category encompassing chronic bladder pain with associated urinary symptoms, where IC/BPS criteria may not yet be fully met.',
+    description: 'A broader diagnostic category, seen mostly in women, encompassing chronic bladder pain with associated urinary symptoms, where IC/BPS criteria may not yet be fully met.',
     overview: 'Bladder Pain Syndrome (BPS) is defined by the European Association of Urology as chronic pelvic pain, pressure, or discomfort perceived to be related to the urinary bladder, accompanied by at least one other urinary symptom such as persistent urgency or frequency, for more than 6 weeks. It overlaps significantly with IC/BPS and is often used interchangeably in clinical practice.',
     symptoms: [
       'Chronic pelvic pain perceived as bladder-related',
@@ -78,7 +78,7 @@ export const CONDITIONS = [
     slug: 'mast-cell-cystitis',
     name: 'Mast Cell Cystitis',
     category: 'M — Microbiome / Mast Cell',
-    description: 'Bladder inflammation driven by elevated mast cell density in the detrusor, causing histamine-mediated urgency, burning, and frequency.',
+    description: 'Bladder inflammation in women driven by elevated mast cell density in the detrusor, causing histamine-mediated urgency, burning, and frequency.',
     overview: 'Mast Cell Cystitis is characterized by elevated mast cell density (>28 cells/mm²) in the detrusor muscle, with histamine-driven bladder inflammation and hypersensitivity. It may exist independently or as a component of IC/BPS, and often responds to antihistamine-based therapy.',
     symptoms: [
       'Severe urgency with small-volume voids',
@@ -94,8 +94,8 @@ export const CONDITIONS = [
     slug: 'radiation-cystitis',
     name: 'Radiation Cystitis',
     category: 'M — Missed / Structural',
-    description: 'Late-onset bladder damage following pelvic radiotherapy for cervical, endometrial, or rectal cancers, causing chronic inflammation and bleeding.',
-    overview: 'Radiation Cystitis develops as a late complication of pelvic radiotherapy, typically months to years after treatment. Radiation damages the urothelium and submucosal vasculature, leading to mucosal atrophy, fibrosis, telangiectasia formation, and chronic haemorrhage. It is frequently underdiagnosed in gynaecological oncology follow-up.',
+    description: 'Late-onset bladder damage in women following pelvic radiotherapy for cervical, endometrial, or rectal cancers, causing chronic inflammation and bleeding.',
+    overview: 'Radiation Cystitis develops as a late complication of pelvic radiotherapy, typically months to years after treatment. Radiation damages the urothelium and submucosal vasculature, leading to mucosal atrophy, fibrosis, telangiectasia formation, and chronic haemorrhage. It is frequently underdiagnosed in women during gynaecological oncology follow-up.',
     symptoms: [
       'Haematuria — microscopic or gross, often persistent',
       'Urinary urgency and frequency',
@@ -110,7 +110,7 @@ export const CONDITIONS = [
     slug: 'hemorrhagic-cystitis',
     name: 'Hemorrhagic Cystitis',
     category: 'M — Missed',
-    description: 'Bladder bleeding arising from radiation, chemotherapy, or immune triggers, causing significant morbidity and often misdiagnosed as recurrent UTI.',
+    description: 'Bladder bleeding in women arising from radiation, chemotherapy, or immune triggers, causing significant morbidity and often misdiagnosed as recurrent UTI.',
     overview: 'Hemorrhagic Cystitis presents as gross haematuria with bladder inflammation from non-infectious causes — most commonly cyclophosphamide chemotherapy, BCG immunotherapy, or pelvic radiation. Acrolein, a toxic metabolite of cyclophosphamide, directly damages the urothelium. Severity ranges from microscopic haematuria to life-threatening clot retention.',
     symptoms: [
       'Gross haematuria — frank blood in urine',
@@ -126,7 +126,7 @@ export const CONDITIONS = [
     slug: 'neurogenic-bladder',
     name: 'Neurogenic Bladder',
     category: 'D — Dysbiosis / Structural',
-    description: 'Bladder dysfunction from neurological causes where altered innervation leads to storage and voiding dysfunction, often masking co-existing urothelial conditions.',
+    description: 'Bladder dysfunction in women from neurological causes where altered innervation leads to storage and voiding dysfunction, often masking co-existing urothelial conditions.',
     overview: 'Neurogenic Bladder results from neurological damage to the pathways controlling bladder function — from spinal cord injury, multiple sclerosis, Parkinson\'s disease, or pelvic nerve damage. The bladder may be overactive (spastic) or underactive (flaccid). Co-existing GAG layer dysfunction is frequently overlooked, worsening symptoms beyond what neurological damage alone explains.',
     symptoms: [
       'Urgency incontinence or overflow incontinence',
@@ -142,8 +142,8 @@ export const CONDITIONS = [
     slug: 'bladder-sensitivity-syndrome',
     name: 'Bladder Sensitivity Syndrome',
     category: 'M — Missed / Early Stage',
-    description: 'Early-stage bladder hypersensitivity before formal IC/BPS diagnosis — the greatest prevention opportunity.',
-    overview: 'Bladder Sensitivity Syndrome describes early-stage urothelial hypersensitivity presenting as persistent urgency, frequency, and pelvic discomfort without meeting full IC/BPS diagnostic criteria. Cultures are negative, cystoscopy is normal, but the patient\'s quality of life is significantly impaired. This represents the critical intervention window to prevent progression to chronic IC/BPS.',
+    description: 'Early-stage bladder hypersensitivity in women before formal IC/BPS diagnosis — the greatest prevention opportunity.',
+    overview: 'Bladder Sensitivity Syndrome describes early-stage urothelial hypersensitivity presenting as persistent urgency, frequency, and pelvic discomfort without meeting full IC/BPS diagnostic criteria. Cultures are negative, cystoscopy is normal, but the woman\'s quality of life is significantly impaired. This represents the critical intervention window to prevent progression to chronic IC/BPS.',
     symptoms: [
       'Persistent urgency without incontinence',
       'Frequency >8 times/day with small volumes',
@@ -218,7 +218,7 @@ export const SYMPTOMS = [
   },
   {
     name: 'Urinary Frequency',
-    description: 'Voiding >8 times/day and often multiple times nightly. Average IC patient voids 16–60 times daily in severe cases.',
+    description: 'Voiding >8 times/day and often multiple times nightly. A woman with severe IC may void 16–60 times daily.',
     severity: 'HIGH' as const,
     severityPercent: 100,
     severityColor: 'bg-sage-deep',
@@ -250,7 +250,7 @@ export const SYMPTOMS = [
   },
   {
     name: 'Hematuria',
-    description: 'Microscopic or gross hematuria present in ~10% of cases. Requires cystoscopy to exclude malignancy before IC diagnosis.',
+    description: 'Microscopic or gross hematuria present in ~10% of women with IC/BPS. Requires cystoscopy to exclude malignancy before IC diagnosis.',
     severity: 'VARIABLE' as const,
     severityPercent: 40,
     severityColor: 'bg-sage-light',
@@ -272,7 +272,7 @@ export const DIAGNOSIS_STEPS = [
   {
     n: '01',
     title: 'Symptom Assessment',
-    body: 'Apply validated tools: ICSI/ICPI (IC Symptom/Problem Index), PUF score, and O\'Leary-Sant questionnaire. Minimum 6 weeks of symptoms required for diagnosis.',
+    body: 'Apply validated tools: ICSI/ICPI (IC Symptom/Problem Index), PUF score, and O\'Leary-Sant questionnaire with the woman presenting. Minimum 6 weeks of symptoms required for diagnosis.',
     tools: ['ICSI/ICPI', 'PUF Score', "O'Leary-Sant"],
   },
   {
@@ -296,7 +296,7 @@ export const DIAGNOSIS_STEPS = [
   {
     n: '05',
     title: 'Differential Exclusion',
-    body: 'Exclude endometriosis, pelvic floor dysfunction, pudendal neuralgia, bladder malignancy, radiation cystitis. Multidisciplinary assessment recommended.',
+    body: 'Exclude endometriosis, pelvic floor dysfunction, pudendal neuralgia, bladder malignancy, radiation cystitis — conditions that commonly co-occur or overlap in women. Multidisciplinary assessment recommended.',
     tools: ['Pelvic USS', 'Urodynamics', 'Laparoscopy if needed'],
   },
   {
@@ -316,10 +316,10 @@ export const ESSIC_CRITERIA = [
 ] as const
 
 export const RED_FLAGS = [
-  'Haematuria (visible or non-visible) — exclude malignancy first',
+  'Haematuria in women (visible or non-visible) — exclude malignancy first',
   'Symptoms in women over 50 with smoking history — bladder cancer risk',
-  'New symptoms post-pelvic radiotherapy — radiation cystitis or fistula',
-  'Rapidly worsening symptoms — may indicate advanced pathology',
+  'New symptoms in women post-pelvic radiotherapy — radiation cystitis or fistula',
+  'Rapidly worsening symptoms in women — may indicate advanced pathology',
 ] as const
 
 // ─── Treatment ────────────────────────────────────────────────────────────────
@@ -329,7 +329,7 @@ export const TREATMENT_LINES = [
     id: 'first',
     label: '1st Line',
     title: 'Education, Lifestyle & Diet Modification',
-    body: 'Patient education, bladder training, dietary elimination (acidic foods, caffeine, alcohol, artificial sweeteners), stress management, physiotherapy referral.',
+    body: 'Educating the woman about her condition, bladder training, dietary elimination (acidic foods, caffeine, alcohol, artificial sweeteners), stress management, physiotherapy referral.',
     treatments: [
       'Bladder training / timed voiding',
       'IC diet elimination protocol',
@@ -377,7 +377,7 @@ export const TREATMENT_LINES = [
     id: 'fourth',
     label: '4th Line',
     title: 'Interventional Procedures',
-    body: 'For refractory IC/BPS. Botulinum toxin A injections, sacral neuromodulation (InterStim®), and hydrodistension under anaesthesia offer significant relief in carefully selected patients.',
+    body: 'For refractory IC/BPS in women. Botulinum toxin A injections, sacral neuromodulation (InterStim®), and hydrodistension under anaesthesia offer significant relief in carefully selected patients.',
     treatments: [
       'Botulinum toxin A (100–200 U) cystoscopic injection',
       'Sacral neuromodulation (SNM)',
@@ -393,7 +393,7 @@ export const TREATMENT_LINES = [
     id: 'fifth',
     label: '5th Line',
     title: 'Surgical Options',
-    body: 'Reserved for severe, refractory cases only. Fulguration of Hunner lesions (if present) may provide dramatic relief. Cyclosporin A for immunomodulation. Augmentation cystoplasty or urinary diversion as last resort.',
+    body: 'Reserved for women with severe, refractory cases only. Fulguration of Hunner lesions (if present) may provide dramatic relief. Cyclosporin A for immunomodulation. Augmentation cystoplasty or urinary diversion as last resort.',
     treatments: [
       'Fulguration / laser ablation of Hunner lesions',
       'Cyclosporin A 1.5–3 mg/kg/day',
@@ -410,10 +410,10 @@ export const TREATMENT_LINES = [
 // ─── Overview Stats ───────────────────────────────────────────────────────────
 
 export const OVERVIEW_STATS = [
-  { number: '70%', label: 'Cases occur in women' },
-  { number: '5–7', label: 'Avg. years to diagnosis' },
-  { number: '6', label: 'MISSED categories' },
   { number: '90%', label: 'IC/BPS patients are women' },
+  { number: '5–7', label: 'Years women wait for diagnosis' },
+  { number: '6', label: 'MISSED categories in women\'s bladder health' },
+  { number: '5x', label: 'More common in women than men' },
 ] as const
 
 // ─── Types ────────────────────────────────────────────────────────────────────

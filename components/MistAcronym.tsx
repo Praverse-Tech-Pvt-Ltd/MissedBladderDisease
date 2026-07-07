@@ -23,10 +23,10 @@ export function MistAcronym() {
       <div className="max-w-6xl mx-auto px-6">
         <div className="mb-14">
           <span className="inline-block text-[0.72rem] font-body font-medium tracking-[0.18em] uppercase text-sage-deep mb-3">
-            The MISSED Framework
+            The MISSED Framework for Women's Bladder Health
           </span>
           <h2 className="font-display text-4xl md:text-5xl font-light text-charcoal leading-tight">
-            Six categories, one framework
+            Six categories, one framework for the conditions women face
           </h2>
         </div>
 

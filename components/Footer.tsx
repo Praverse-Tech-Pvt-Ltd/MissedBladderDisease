@@ -6,10 +6,11 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-1">
-            <div className="font-display text-2xl font-light mb-3">Missed Bladder Disease</div>
+            <div className="font-display text-2xl font-light mb-3">Missed Bladder Disease in Women</div>
             <p className="font-body text-sm text-white/50 leading-relaxed mb-4 max-w-xs">
               A physician education initiative addressing the diagnostic gap in women's
-              bladder health across India and beyond.
+              bladder health — where IC/BPS affects women 5–10 times more often than men —
+              across India and beyond.
             </p>
             <p className="font-body text-xs text-white/30 leading-relaxed">
               Led by Dr. Sanjay Pandey<br />
@@ -104,7 +105,7 @@ export function Footer() {
               </li>
               <li>
                 <Link href="/#about-icbps" className="font-body text-sm text-white/60 hover:text-white transition-colors">
-                  About IC/BPS
+                  About IC/BPS in Women
                 </Link>
               </li>
             </ul>

@@ -17,8 +17,8 @@ export async function generateMetadata({
   const condition = CONDITIONS.find((c) => c.slug === params.slug)
   if (!condition) return {}
   return {
-    title: condition.name,
-    description: `Clinical information on ${condition.name} — part of the Missed Bladder Disease educational initiative.`,
+    title: `${condition.name} in Women`,
+    description: `Clinical information on ${condition.name} in women — part of the Missed Bladder Disease educational initiative.`,
   }
 }
 
